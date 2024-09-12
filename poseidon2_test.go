@@ -6,6 +6,8 @@ import (
 	f "github.com/consensys/gnark-crypto/field/goldilocks"
 )
 
+// Test cases generated from Plonky3 implementation
+
 func TestPermute(t *testing.T) {
 	inp := [WIDTH]f.Element{
 		f.NewElement(5417613058500526590),
@@ -64,7 +66,7 @@ func TestHashNToMNoPad(t *testing.T) {
 	}
 
 	p := Poseidon2{}
-	res := p.HashToMNoPad(inp[:], 12)
+	res := p.HashNToMNoPad(inp[:], 12)
 
 	expected := [WIDTH]f.Element{
 		f.NewElement(3627923032009111551),

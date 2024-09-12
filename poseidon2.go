@@ -8,7 +8,7 @@ import (
 
 type Poseidon2 struct{}
 
-func (p *Poseidon2) HashToMNoPad(input []f.Element, numOutputs int) []f.Element {
+func (p *Poseidon2) HashNToMNoPad(input []f.Element, numOutputs int) []f.Element {
 	var perm [WIDTH]f.Element
 	for i := 0; i < len(input); i += RATE {
 		for j := 0; j < RATE && i+j < len(input); j++ {
